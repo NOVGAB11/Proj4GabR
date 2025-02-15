@@ -1,5 +1,13 @@
 <script setup>
   import {ref} from 'vue'
+  import UserInputSong from './components/UserInputSong.vue';
+
+  const playlist = ref([]);
+  const addSong = (song) => {
+    playlist.value.push(song);
+  };
+
+
 
 </script>
 
