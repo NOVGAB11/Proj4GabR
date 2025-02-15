@@ -3,20 +3,16 @@
   import UserInputSong from './components/UserInputSong.vue';
 
   const playlist = ref([]);
-  const song = ref('');
   const nowPlaying = ref(null);
   const emit = defineEmits();
+  const song = ref('');
+
 
   const addSong = (song) => {
     playlist.value.push(song);
   };
 
-  const addSongToPlaylist = () => {
-    if (song.value.trim() !== '') {
-      emit('addSong', song.value);
-      song.value = '';
-    }
-  };
+ 
 
   const settingNowPlaying = (song) => {
     nowPlaying.value = song;
