@@ -91,3 +91,19 @@ h2{
   font-size: 2em;
 }
 
+input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #3bcc9c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8bdd;
+}
