@@ -4,7 +4,7 @@
 
   const playlist = ref([]);
   const nowPlaying = ref(null);
-  const emit = defineEmits();
+  
   const song = ref('');
 
 
