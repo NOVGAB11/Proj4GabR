@@ -4,6 +4,8 @@
 
   const playlist = ref([]);
   const song = ref('');
+  const nowPlaying = ref(null);
+  const emit = defineEmits();
 
   const addSong = (song) => {
     playlist.value.push(song);
@@ -16,7 +18,22 @@
     }
   };
 
+  const settingNowPlaying = (song) => {
+    nowPlaying.value = song;
+  };
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <template>
   <main class="app">
@@ -24,11 +41,10 @@
 
     <section class="user-input-song">
       <UserInputSong @addSong="addSong" />
-
-      
     </section>
 
     <section class="playlist">
+      <h2>Playlist</h2>
       <ul>
         <li v-for="(song, index) in playlist" :key="index" @click="settingNowPlaying(song)">
           {{ song }}
@@ -38,20 +54,10 @@
 
 
     <section class="song-playing">
-      <h2>Now Playing</h2>
+      <h3>Now Playing</h3>
       <p v-if="nowPlaying"> &#9835 Currently Playing &#9835 : {{nowPlaying}}</p>
       <p v-else>Nothing is playing right now...</p>
     </section>
-
-
-
-    <section class="playlist-duration" v-if="playlist-length > 0">
-
-    </section>
-
-
-    
-
 
   </main>
  
