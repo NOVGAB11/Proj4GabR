@@ -9,11 +9,4 @@
     <button @click="addSongToPlaylist">&#9835 Add Song &#9835</button>
   </div> 
     
-
-    
-
-
-  
- 
-
 </template>

@@ -29,15 +29,21 @@
     </section>
 
     <section class="playlist">
-
-
+      <ul>
+        <li v-for="(song, index) in playlist" :key="index" @click="settingNowPlaying(song)">
+          {{ song }}
+        </li>
+      </ul>
     </section>
 
 
-    <section class="song-playing" v-if="currentSong">
-
-
+    <section class="song-playing">
+      <h2>Now Playing</h2>
+      <p v-if="nowPlaying"> &#9835 Currently Playing &#9835 : {{nowPlaying}}</p>
+      <p v-else>Nothing is playing right now...</p>
     </section>
+
+
 
     <section class="playlist-duration" v-if="playlist-length > 0">
 
