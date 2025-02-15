@@ -8,6 +8,7 @@
     <h1>Playlist Tracker</h1>
 
     <section class="user-input-song">
+      <UserInputSong @addSong="addSong" />
 
       
     </section>
