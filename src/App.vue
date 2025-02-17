@@ -1,5 +1,5 @@
 <script setup>
-  import {ref} from 'vue'
+  import {ref, computed} from 'vue'
   import UserInputSong from './components/UserInputSong.vue';
 
   const playlist = ref([]);
@@ -17,18 +17,9 @@
   const settingNowPlaying = (song) => {
     nowPlaying.value = song;
   };
+
+  const songCount = computed(() => playlist.value.lenght);
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <template>
@@ -55,6 +46,9 @@
       <p v-else>Nothing is playing right now...</p>
     </section>
 
+    <section class="song-count">
+      <h3>Total Songs: {{ songCount}}</h3>
+    </section>
   </main>
  
 
