@@ -20,8 +20,8 @@
   const songCount = computed(() => playlist.value.length);
 
   const removeSongFromPlaylist = (songBeingRemoved) => {
-    playlist.value = playlist.value.filter((song) => song.name !== songToRemove.name);
-  }
+    playlist.value = playlist.value.filter((song) => song.name !== songBeingRemoved.name);
+  };
 </script>
 
 
@@ -34,12 +34,11 @@
     </section>
 
     <section class="playlist">
-      <h2>Playlist</h2>
-      <ul>
-        <li v-for="(song, index) in playlist" :key="index" @click="settingNowPlaying(song)">
-          {{ song }}
-        </li>
-      </ul>
+      <Playlist
+      :playlist="playlist"
+      :onSongClick="settingNowPlaying"
+      @removeSong="removeSongFromPlaylist"
+      />
     </section>
 
 
