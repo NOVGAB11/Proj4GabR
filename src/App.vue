@@ -7,8 +7,10 @@
   const nowPlaying = ref(null);
   
 
-  const addSong = (songName) => {
-    playlist.value.push({name: songName, isFavorite: false});
+  const addSong = (songDetail) => {
+    if (songDetail.artist && songDetail.song){
+      playlist.value.push({ artist: songDetail.artist, song: songDetail.song});
+    }
   };
 
   const settingNowPlaying = (song) => {
