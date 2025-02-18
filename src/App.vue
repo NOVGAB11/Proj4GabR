@@ -1,7 +1,7 @@
 <script setup>
   import {ref, computed} from 'vue'
   import UserInputSong from './components/UserInputSong.vue';
-  import PLaylist from './components/Playlist.vue';
+  import Playlist from './components/Playlist.vue';
 
   const playlist = ref([]);
   const nowPlaying = ref(null);
