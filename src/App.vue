@@ -27,7 +27,9 @@
 
 <template>
   <main class="app">
-    <h1>Playlist Tracker</h1>
+    <h1>Build-A-Playlist</h1> 
+    <p>&#9835 ʕ•ᴥ•ʔ &#9835</p>
+
 
     <section class="user-input-song">
       <UserInputSong @addSong="addSong" />
