@@ -21,7 +21,7 @@ const removeSong = (songBeingRemoved) => {
     <ul>
       <li v-for="(song, index) in props.playlist" :key="index">
         <span @click="props.onSongClick(song)">
-          {{song.name}}
+          {{song.song}} by {{song.artist}}
         </span>
        <button @click.stop="removeSong(song)">Remove Song</button>
       </li>
