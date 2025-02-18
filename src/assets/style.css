@@ -81,10 +81,18 @@ button:focus-visible {
 .app {
   font-family:'Courier New', Courier, monospace;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150vh;
 }
 
 section {
   margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
 
 h2{
@@ -94,6 +102,7 @@ h2{
 input {
   padding: 8px;
   margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 button {
@@ -118,6 +127,9 @@ ul li {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding: 7px;
+  border: 1px solid #3bcc9c;
+  border-radius: 10px;
 }
 
 button {
@@ -126,6 +138,7 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  
 }
 
 button:hover {
