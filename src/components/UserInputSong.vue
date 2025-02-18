@@ -1,12 +1,14 @@
 <script setup>
 import {ref, defineEmits} from 'vue';
 
+const artist = ref('');
 const song = ref('');
 const emit = defineEmits();
 
 const addSongToPlaylist = () => {
-    if (song.value.trim() !== '') {
-      emit('addSong', song.value);
+    if (artist.value.trim() !== '' && song.value.trim() !== '') {
+      emit('addSong', {artist: artist.value, song:song.value});
+      artist.value = '';
       song.value = '';
     }
   };
