@@ -44,7 +44,7 @@
 
     <section class="song-playing">
       <h3>Now Playing</h3>
-      <p v-if="nowPlaying"> &#9835 Currently Playing &#9835 : {{nowPlaying}}</p>
+      <p v-if="nowPlaying"> &#9835 Currently Playing &#9835 : {{nowPlaying.song}} by {{nowPlaying.artist}}</p>
       <p v-else>Nothing is playing right now...</p>
     </section>
 
