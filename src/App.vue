@@ -1,13 +1,11 @@
 <script setup>
   import {ref, computed} from 'vue'
   import UserInputSong from './components/UserInputSong.vue';
-  import PLaylist from './components/UserInputSong.vue';
+  import PLaylist from './components/Playlist.vue';
 
   const playlist = ref([]);
   const nowPlaying = ref(null);
   
-  const song = ref('');
-
 
   const addSong = (songName) => {
     playlist.value.push({name: songName, isFavorite: false});
