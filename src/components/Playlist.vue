@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps} from 'vue';
+import { defineProps, defineEmits } from 'vue';
 
 const props =defineProps({
   playlist: Array,
@@ -19,9 +19,9 @@ const removeSong = (songBeingRemoved) => {
   <main class="playlist">
     <h2>Playlist</h2>
     <ul>
-      <li v-for="(song, index) in props.playlist" :key="index" @click="props.onSongClick(song)">
+      <li v-for="(song, index) in props.playlist" :key="index">
         <span @click="props.onSongClick(song)">
-          {{song}}
+          {{song.name}}
         </span>
        <button @click.stop="removeSong(song)">Remove Song</button>
       </li>
