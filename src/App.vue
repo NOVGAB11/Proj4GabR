@@ -20,7 +20,7 @@
   const songCount = computed(() => playlist.value.length);
 
   const removeSongFromPlaylist = (songBeingRemoved) => {
-    playlist.value = playlist.value.filter((song) => song.name !== songBeingRemoved.name);
+    playlist.value = playlist.value.filter((song) => song.song !== songBeingRemoved.song && song.artist !== songBeingRemoved.artist);
   };
 </script>
 
