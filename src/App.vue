@@ -1,6 +1,7 @@
 <script setup>
   import {ref, computed} from 'vue'
   import UserInputSong from './components/UserInputSong.vue';
+  import PLaylist from './components/UserInputSong.vue';
 
   const playlist = ref([]);
   const nowPlaying = ref(null);
@@ -8,17 +9,19 @@
   const song = ref('');
 
 
-  const addSong = (song) => {
-    playlist.value.push(song);
+  const addSong = (songName) => {
+    playlist.value.push({name: songName, isFavorite: false});
   };
-
- 
 
   const settingNowPlaying = (song) => {
     nowPlaying.value = song;
   };
 
-  const songCount = computed(() => playlist.value.lenght);
+  const songCount = computed(() => playlist.value.length);
+
+  const removeSongFromPlaylist = (songBeingRemoved) => {
+    playlist.value = playlist.value.filter((song) => song.name !== songToRemove.name);
+  }
 </script>
 
 
@@ -49,6 +52,8 @@
     <section class="song-count">
       <h3>Total Songs: {{ songCount}}</h3>
     </section>
+
+
   </main>
  
 
